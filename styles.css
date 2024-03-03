@@ -1,0 +1,247 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-col: #070F2B;
+    --cell-col: #1B1A55;
+    --font-col: #EEEEEE;
+    --icon-neon: #ff10f0cc;
+}
+
+.light-theme{
+    --bg-col: #aec9fc;
+    --cell-col: #3F72AF;
+    --font-col: #EEEEEE;
+    --icon-neon: #112D4E;
+}
+
+#nav-bar{
+    position: absolute;
+    height: 10vh;
+    padding: 0px 8vmin;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-bar h1{
+    color: var(--icon-neon);
+
+}
+
+#nav-bar button{
+    height: 60%;
+    width: auto;
+    padding: 0px 4vmin;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 2px var(--icon-neon), 0px 0px 5px 1px rgb(255, 255, 255, 0.5);
+    background-color: var(--cell-col);
+    color: var(--font-col);
+}
+
+body{
+    background-color: var(--bg-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-container{
+    position: relative;
+    height: 60vmin;
+    width: 60vmin;
+    margin: auto;
+    top: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5vmin;
+}
+
+#game-container .box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 10px;
+    background-color: var(--cell-col);
+    box-shadow: 0px 0px 5px 2px var(--icon-neon), 0px 0px 5px 1px rgb(255, 255, 255, 0.5);
+    outline: none;
+    border: none;
+    font-size: 12vmin;
+    color: var(--font-col);
+    text-shadow: 0px 0px 10px var(--icon-neon);
+}
+
+#player-container{
+    height: 60vmin;
+    width: 90vw;
+    z-index: -1;
+    position: absolute;
+    top: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#player-container .players{
+    height: 38vmin;
+    width: 35vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#player-container .players span{
+    font-size: 18vmin;
+    color: var(--font-col);
+    text-shadow: 0px 0px 10px var(--icon-neon);
+}
+
+#player-container .players label{
+    height: 8vmin;
+    width: 100%;
+    padding: 1.5vmin;
+    background-color: var(--cell-col);
+    color: var(--font-col);
+    border-radius: 3vmin;
+    text-align: center;
+    padding: auto;
+    font-size: 3.5vmin;
+}
+
+@media only screen and (max-width: 500px){
+    #nav-bar{
+        padding: 0px 20px;
+    }
+
+    #nav-bar h1{
+        font-size: 1.2em;
+    }
+
+    #nav-bar button:last-child{
+        font-size: 1.2em;
+    }
+
+    #nav-bar button{
+        font-size: 0.7em;
+    }
+    
+    #game-container{
+        top: 35vh;
+    }
+
+    #player-container{
+        height: 80vh;
+        width: 100vw;
+        top: 10vh;
+        padding: 5vh 0px;
+        flex-direction: column;
+    }
+
+    #player-container .players{
+        width: 60vw;
+        flex-direction: row;
+    }
+
+    #player-container .players label{
+        width: 65%;
+    }
+}
+
+/* Player form design */
+
+#player-form, #winner-msg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: var(--bg-col);
+}
+
+#winner-msg{
+    display: none;
+    font-size: 10vmin;
+}
+
+#player-form h1, 
+#winner-msg h1{
+    margin-bottom: 30px ;
+    font-size: 12vmin;
+    color: var(--font-col);
+    text-shadow: 0px 0px 8px var(--icon-neon);
+}
+
+#player-form #form{
+    height: 50vmin;
+    width: 75vmin;
+}
+
+#player-form #form .input-box{
+    height: 10vmin;
+    width: 100%;
+    margin: 5vmin 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#player-form #form .input-box label{
+    font-size: 10vmin;
+    color: var(--font-col);
+    text-shadow: 0px 0px 10px red;
+}
+
+#player-form #form .input-box input{
+    height: 100%;
+    width: 85%;
+    padding: 0px 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--cell-col);
+    color: var(--font-col);
+    font-size: 2.8vmin;
+    text-transform: uppercase;
+}
+
+#player-form #form button,
+#winner-msg button{
+    height: 8vmin;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 3vmin;
+}
+
+#winner-msg button{
+    width: 70%;
+}
+
+/* My name display tag */
+#developer-info{
+    z-index: 20;
+    position: absolute;
+    bottom: 5vmin;
+    right: 10vmin;
+    font-size: 2vmin;
+    color: var(--icon-neon);
+    letter-spacing: 2px;
+}

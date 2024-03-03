@@ -7,29 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <body>
-    <!-- Section to choose option between VS computer and play with friends -->
-    <div id="player-selection">
-        <h1 id="heading">Tic - Tac - Toe</h1>
-        <div id="options">
-            <button id="vs-comp"><i class='bx bx-laptop'></i>VS Computer</button>
-            <button id="with-frnds"><i class='bx bxs-group'></i></i>Play with friends</button>
-        </div>
-        <div id="player-info">
-            <input type="text" id="player-name" name="player-name" placeholder="Enter your name...">
-            <div id="choice">
-                <label>Select your symbol : </label>
-                <button id="opt-X">X</button>
-                <button id="opt-O">O</button>
-            </div>
-            <button id="start-vs-comp">Start game</button>
-        </div>
-    </div>
-        <!-- Player name form : this form is for asking the names of both players. -->
+    <!-- Player name form : this form is for asking the names of both players. -->
     <div id="player-form">
-        <h1 id="heading">Tic - Tac - Toe</h1>
+        <h1>Tic - Tac - Toe</h1>
         <div id="form">
             <div class="input-box">
                 <label for="playerO">O</label>
@@ -46,20 +29,18 @@
 
     <!-- Section which displays the winner name after the game is won by any player -->
     <div id="winner-msg">
-        <h1 id="heading">WINNER!!</h1>
+        <h1>WINNER!!</h1>
     </div>
 
     <!-- Navigation bar for displaying the name of the game and reset button. -->
     <div id="nav-bar">
         <h1>Tic - Tac - Toe</h1>
-        <button id="new-game">New Game</button>
+        <button id="new-game">Reset</button>
         <button id="mode-change"></button>
     </div>
     <!-- End of navigation bar -->
 
-
-
-    <!-- Option for playing with friends for displaying the names and symbols of both the players. -->
+    <!-- container for displaying the names and symbols of both the players. -->
     <div id="player-container">
         <div class="players" id="P1">
             <span name="player1">O</span>
@@ -74,15 +55,15 @@
 
     <!-- The main game container which contains the game and cells of the game -->
     <div id="game-container">
-        <button class="box" id="1"></button>
-        <button class="box" id="2"></button>
-        <button class="box" id="3"></button>
-        <button class="box" id="4"></button>
-        <button class="box" id="5"></button>
-        <button class="box" id="6"></button>
-        <button class="box" id="7"></button>
-        <button class="box" id="8"></button>
-        <button class="box" id="9"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
     </div>
     <!-- End of the main game section. -->
 
